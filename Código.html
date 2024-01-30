@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Productos</title>
+</head>
+<body>
+
+  <h2>Lista de Productos</h2>
+<!-- Se genera la tabla -->
+  <table border="1">
+    <thead> <!-- Representa la columna -->
+      <tr> <!-- El tr es para las filas, en conjunto con el thead se usa para colocar encabezado a las columnas -->
+        <th>Producto</th> <!-- En cabezado -->
+        <th>Precio</th>
+      </tr>
+    </thead>
+    <tbody id="tablaProductos">
+      <!-- Aquí se agregarán las filas de la tabla dinámicamente con JavaScript -->
+    </tbody>
+  </table>
+  <!-- Fin de la tabla -->
+
+<!-- Inicia el script -->
+  <script> 
+  
+    /* Objetos de productos con sus precios */
+    const productos = [
+      { producto: "El Principito Pasta dura", precio: 55 },
+      { producto: "El Faro del Fin del Mundo Pasta blanda", precio: 42 },
+      { producto: "VIEJO Y EL MAR, EL Pasta blanda", precio: 60 },
+      
+    ];
+
+    // Función para agregar filas a la tabla
+    function agregarFilas() {
+      const tablaProductos = document.getElementById("tablaProductos");
+
+      productos.forEach(producto => {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `<td>${producto.producto}</td><td>${producto.precio}</td>`;
+        tablaProductos.appendChild(fila);
+      });
+    }
+
+    // Llamar a la función para agregar filas al cargar la página
+    window.onload = agregarFilas;
+  </script>
+
+</body>
+</html>
