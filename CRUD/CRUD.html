@@ -61,16 +61,17 @@
 
 <div class="container">
   <h1>Proyecto<span style="color: #f779f9">U</span><span style="color: #5fc9fe">1</span></h1>
-  <button class="btn" onclick="agregar()">Agregar</button>
+  <button class="btn" id="Agregar">Agregar</button>
   <button class="btn" onclick="editar()">Editar</button>
   <button class="btn" onclick="eliminar()">Eliminar</button>
   <p><a href="Crudregistros.html" class="link">Ver la tabla</a></p>
 </div>
 
 <script>
-  function agregar() {
-    alert('Funcionalidad de Alex y Rodrigo juntos x100pre');
-  }
+    document.getElementById("Agregar").addEventListener("click", function(){
+      window.location.href = "VistaAgregar.html";
+    })
+  
 
   function editar() {
     alert('Funcionalidad de Editar & no se quien la hace');
