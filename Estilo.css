@@ -1,0 +1,55 @@
+body {
+    background-image: url('https://img.freepik.com/vector-gratis/ilustracion-concepto-programacion_114360-1351.jpg?w=740&t=st=1695193676~exp=1695194276~hmac=79a34d7c20525408ea1002ca06c419513b5eb6dd8f25fda5e3d61fa07fdbd3fc');
+    background-size: 30% 50%;
+    background-repeat: no-repeat;
+    background-position: 850px 400px;
+
+
+}
+
+
+#titulo {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    margin: 0px;
+    width: 100%;
+    height: 100px;
+
+}
+
+#form {
+    font-weight: 700;
+    float: left;
+    width: 40%;
+    border: 1px solid black;
+    margin-right: 10px;
+    padding: 10px;
+    background-color: aliceblue;
+}
+
+#lista {
+    margin-top: 23px;
+    border: 1px solid black;
+    width: 650px;
+    background-color: aliceblue;
+}
+
+th {
+    border: 3px solid black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+tr,
+td {
+    border: 1px solid black;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#Cuerpo {
+    height: 500px;
+}
