@@ -37,13 +37,32 @@ $(document).ready(function() {
                 Nombre: nombre,
                 Descripcion: descripcion
             });
-        } else {
+        } else {//inicio Else
+            //Se edita un producto que ya existe
             
-        }
+            data[editIndex].ID = id;
+            //Data es el tipo de arreglo, el cual modificara un parametro en especifico llamando "editIndex" cuya propiedad es ID y se le asgina el valor del "id"
+            data[editIndex].Categoria = categoria;
+            //El arreglo data modificara un valor en especifico llamado categoria
+            data[editIndex].Nombre = nombre;
+            //El arreglo asigna el nombre del arreglo de nombre
+            data[editIndex].Descripcion = descripcion;
+            //El arreglo asigna la propiedad de descripción
+            $("#editIndex").val(""); //El signo "$" esta seleccionando una libreria de jQuery
+            //La propiedad "#editIndex" es un elemento especifico que coincida con el id y ".val("")" establece un valor predeterminado
+        }//fin else
 
+        //Limpiar formulario
+
+        $("#ID").val("");
+        $("#Categoria").val("");
+        $("#Nombre").val("");
+        $("#Descripcion").val("");
+        
         // Actualizar la tabla
         actualizarTabla();
     });
+
 
 
     $("#lista").on("click", ".btn-eliminar", function() {
