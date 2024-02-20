@@ -21,6 +21,13 @@ $(document).ready(function() {
         }
     }
 
+
+    $("#lista").on("click", ".btn-eliminar", function() {
+        var index = $(this).closest("tr").data("index");
+        data.splice(index, 1);
+        actualizarTabla();
+    });
+
     // Inicializar la tabla
     actualizarTabla();
 });
