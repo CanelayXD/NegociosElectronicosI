@@ -13,8 +13,8 @@ $(document).ready(function() {
                             <td>${producto.Nombre}</td>
                             <td>${producto.Descripcion}</td>
                             <td>
-                                <button class="btn btn-primary btn-editar">Editar</button>
-                                <button class="btn btn-danger btn-eliminar">Eliminar</button>
+                            <button class="btn btn-primary btn-editar"><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button class="btn btn-danger btn-eliminar"><i class="fa-solid fa-trash-can"></i></button>
                             </td>
                         </tr>`;
             tabla.append(fila);
