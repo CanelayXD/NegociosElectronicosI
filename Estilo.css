@@ -27,14 +27,14 @@ body {
     border: 1px solid black;
     margin-right: 10px;
     padding: 10px;
-    background-color: aliceblue;
+    background-color: rgb(207, 209, 207);
 }
 
 #lista {
     margin-top: 23px;
     border: 1px solid black;
     width: 650px;
-    background-color: aliceblue;
+    background-color: rgb(3, 3, 3);
 }
 
 th {
