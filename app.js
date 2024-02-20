@@ -21,6 +21,30 @@ $(document).ready(function() {
         }
     }
 
+    // Agregar o editar un producto
+    $("#agregarEditar").click(function() {
+        var id = $("#ID").val();
+        var categoria = $("#Categoria").val();
+        var nombre = $("#Nombre").val();
+        var descripcion = $("#Descripcion").val();
+        var editIndex = $("#editIndex").val();
+
+        if (editIndex === "") {
+            // Agregar nuevo producto
+            data.push({
+                ID: id,
+                Categoria: categoria,
+                Nombre: nombre,
+                Descripcion: descripcion
+            });
+        } else {
+            
+        }
+
+        // Actualizar la tabla
+        actualizarTabla();
+    });
+
 
     $("#lista").on("click", ".btn-eliminar", function() {
         var index = $(this).closest("tr").data("index");
