@@ -1,10 +1,9 @@
 body {
-    background-image: url('https://img.freepik.com/vector-gratis/ilustracion-concepto-programacion_114360-1351.jpg?w=740&t=st=1695193676~exp=1695194276~hmac=79a34d7c20525408ea1002ca06c419513b5eb6dd8f25fda5e3d61fa07fdbd3fc');
-    background-size: 30% 50%;
+    background-image: url("fondo.png");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: 850px 400px;
-
-
+    background-position: center;
+    
 }
 
 
@@ -13,22 +12,32 @@ body {
     font-size: 80px;
     font-weight: 500;
     font-style: normal;
-    color: black;
+    color: white;
     margin: 0px;
     width: 100%;
     height: 100px;
-
+    background: linear-gradient(to right, #749fd3, #fc8c63, #b753f6);
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
 }
+
+
+
 
 #form {
     font-weight: 700;
     float: left;
     width: 40%;
-    border: 1px solid black;
+    border: 1px solid rgb(201, 85, 247);
     margin-right: 10px;
     padding: 10px;
-    background-color: rgb(207, 209, 207);
+    background-color: rgba(248, 241, 250, 0.5); 
+    border-radius: 10px; 
 }
+
+
+
 
 #lista {
     margin-top: 23px;
