@@ -64,7 +64,7 @@ $(document).ready(function () {
             });
         } else {
             // Se edita un producto que ya existe
-            data[editIndex] = id;
+            ///data[editIndex] = id;
             data[editIndex].Categoria = categoria;
             data[editIndex].Nombre = nombre;
             data[editIndex].Imagen = imagen;
