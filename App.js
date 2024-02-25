@@ -8,7 +8,7 @@ $(document).ready(function () {
         for (var i = 0; i < data.length; i++) {
             var producto = data[i];
             var fila = `<tr data-index="${i}">
-                <td>${producto.ID}</td>
+                 <td>${producto.ID}</td> 
                 <td>${producto.Categoria}</td>
                 <td>${producto.Nombre}</td>
                 <td>${producto.Imagen}</td> <!-- Mostrar la URL de la imagen -->
@@ -56,7 +56,7 @@ $(document).ready(function () {
         if (editIndex === "") {
             // Agregar nuevo producto
             data.push({
-                ID: data.length + 1, // Autoincrementable
+              ID: data.length +1, // Autoincrementable
                 Categoria: categoria,
                 Nombre: nombre,
                 Imagen: imagen,
@@ -64,7 +64,7 @@ $(document).ready(function () {
             });
         } else {
             // Se edita un producto que ya existe
-            data[editIndex].ID = id;
+            data[editIndex] = id;
             data[editIndex].Categoria = categoria;
             data[editIndex].Nombre = nombre;
             data[editIndex].Imagen = imagen;
