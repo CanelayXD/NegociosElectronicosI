@@ -47,6 +47,7 @@ $(document).ready(function () {
         var id = $("#ID").val();
         var categoria = $("#Categoria").val();
         var nombre = $("#Nombre").val();
+        var precio = $("#Precio").val();
         var descripcion = $("#Descripcion").val();
 
         // Obtener la información de la imagen
@@ -61,6 +62,7 @@ $(document).ready(function () {
                 ID: data.length + 1, // Autoincrementable
                 Categoria: categoria,
                 Nombre: nombre,
+                Precio : precio,
                 Imagen: imagen,
                 Descripcion: descripcion
             });
@@ -69,6 +71,7 @@ $(document).ready(function () {
             //data[editIndex] = id;
             data[editIndex].Categoria = categoria;
             data[editIndex].Nombre = nombre;
+            data[editIndex].Precio = precio;
             data[editIndex].Imagen = imagen;
             data[editIndex].Descripcion = descripcion;
             $("#editIndex").val("");
@@ -78,6 +81,7 @@ $(document).ready(function () {
         $("#ID").val("");
         $("#Categoria").val("");
         $("#Nombre").val("");
+        $("#Precio").val("");
         $("#Imagen").val("");
         $("#Descripcion").val("");
         $("#ImagenPreview").attr("src", "");
@@ -94,6 +98,7 @@ $(document).ready(function () {
         $("#ID").val(producto.ID);
         $("#Categoria").val(producto.Categoria);
         $("#Nombre").val(producto.Nombre);
+        $("#Precio").val(producto.Precio);
         $("#Descripcion").val(producto.Descripcion);
 
         // Actualizar la vista previa de la imagen
@@ -122,6 +127,7 @@ $(document).ready(function () {
         $("#ID").val("");
         $("#Categoria").val("");
         $("#Nombre").val("");
+        $("#Precio").val("");
         $("#Imagen").val("");
         $("#Descripcion").val("")
         actualizarTabla();
