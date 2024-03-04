@@ -8,7 +8,7 @@ $(document).ready(function () {
         for (var i = 0; i < data.length; i++) {
             var producto = data[i];
             var fila = `<tr data-index="${i}">
-                 <td>${producto.ID}</td> 
+                 <td>${i + 1}</td> 
                 <td>${producto.Categoria}</td>
                 <td>${producto.Nombre}</td>
                 <td>${producto.Imagen}</td> <!-- Mostrar la URL de la imagen -->
@@ -22,6 +22,7 @@ $(document).ready(function () {
             tabla.append(fila);
         }
     }
+
 
     $("#ImagenInput").change(function () {
         var fileInput = $(this)[0];
@@ -56,7 +57,7 @@ $(document).ready(function () {
         if (editIndex === "") {
             // Agregar nuevo producto
             data.push({
-              ID: data.length +1, // Autoincrementable
+                ID: data.length + 1, // Autoincrementable
                 Categoria: categoria,
                 Nombre: nombre,
                 Imagen: imagen,
@@ -79,7 +80,6 @@ $(document).ready(function () {
         $("#Imagen").val("");
         $("#Descripcion").val("");
         $("#ImagenPreview").attr("src", "");
-        
 
         // Actualizar la tabla
         actualizarTabla();
@@ -111,6 +111,12 @@ $(document).ready(function () {
     $("#lista").on("click", ".btn-eliminar", function () {
         var index = $(this).closest("tr").data("index");
         data.splice(index, 1);
+
+        // Recalcular los IDs
+        for (var i = index; i < data.length; i++) {
+            data[i].ID = i + 1;
+        }
+
         // Limpiar formulario
         $("#ID").val("");
         $("#Categoria").val("");
