@@ -11,8 +11,8 @@ $(document).ready(function () {
                  <td>${i + 1}</td> 
                 <td>${producto.Categoria}</td>
                 <td>${producto.Nombre}</td>
-                <td>${producto.Descripcion}</td>
                 <td>${producto.Precio}</td>
+                <td>${producto.Descripcion}</td>
                 <td>${producto.Imagen}</td> <!-- Mostrar la URL de la imagen -->
                 <td>
                     <button class="btn btn-primary btn-editar"><i class="fa-solid fa-pen-to-square"></i></button>
