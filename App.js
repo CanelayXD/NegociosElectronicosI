@@ -14,8 +14,7 @@ $(document).ready(function () {
             }
         });
     }
-    cargarProductos();
-    
+
     function actualizarTabla() {
         var tabla = $("#lista tbody");
         tabla.empty();
@@ -28,7 +27,7 @@ $(document).ready(function () {
                 <td>${producto.Nombre}</td>
                 <td>${producto.Precio}</td>
                 <td>${producto.Descripcion}</td>
-                <td>${producto.Imagen}</td> <!-- Mostrar la URL de la imagen -->
+                <td>${producto.Imagen}</td>
                 <td>
                     <button class="btn btn-primary btn-editar"><i class="fa-solid fa-pen-to-square"></i></button>
                     <button class="btn btn-danger btn-eliminar"><i class="fa-solid fa-trash-can"></i></button>
@@ -73,7 +72,7 @@ $(document).ready(function () {
         if (editIndex === "") {
             // Agregar nuevo producto
             data.push({
-                ID: data.length + 1, // Autoincrementable
+                ID: data.length + 1,
                 Categoria: categoria,
                 Nombre: nombre,
                 Precio: precio,
@@ -82,7 +81,6 @@ $(document).ready(function () {
             });
         } else {
             // Se edita un producto que ya existe
-            //data[editIndex] = id;
             data[editIndex].Categoria = categoria;
             data[editIndex].Nombre = nombre;
             data[editIndex].Precio = precio;
@@ -121,7 +119,7 @@ $(document).ready(function () {
         if (imagenURL) {
             $("#ImagenPreview").attr("src", imagenURL);
         } else {
-            $("#ImagenPreview").attr("src", ""); // Limpiar la vista previa si no hay URL de imagen
+            $("#ImagenPreview").attr("src", "");
         }
 
         // Guardar el índice para saber que estamos editando
@@ -143,10 +141,12 @@ $(document).ready(function () {
         $("#Nombre").val("");
         $("#Precio").val("");
         $("#Imagen").val("");
-        $("#Descripcion").val("")
+        $("#Descripcion").val("");
         actualizarTabla();
     });
 
-    // Inicializar la tabla
-    actualizarTabla();
+    // Manejador de eventos para cargar productos al hacer clic en el botón
+    $("#cargarJSON").click(function () {
+        cargarProductos();
+    });
 });
