@@ -1,0 +1,18 @@
+[
+    {
+      "ID": 1,
+      "Categoria": "Limpieza",
+      "Nombre": "Detergente",
+      "Precio": 5.99,
+      "Descripcion": "Limpieza profunda",
+      "Imagen": "url_imagen_1.jpg"
+    },
+    {
+      "ID": 2,
+      "Categoria": "Limpieza",
+      "Nombre": "Desinfectante",
+      "Precio": 7.99,
+      "Descripcion": "Elimina gérmenes",
+      "Imagen": "url_imagen_2.jpg"
+    }
+  ]

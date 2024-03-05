@@ -1,6 +1,21 @@
 $(document).ready(function () {
     var data = [];
 
+    function cargarProductos() {
+        $.ajax({
+            url: 'productos.json',
+            dataType: 'json',
+            success: function (productos) {
+                data = productos;
+                actualizarTabla();
+            },
+            error: function () {
+                alert('Error al cargar los productos.');
+            }
+        });
+    }
+    cargarProductos();
+    
     function actualizarTabla() {
         var tabla = $("#lista tbody");
         tabla.empty();
@@ -23,7 +38,6 @@ $(document).ready(function () {
             tabla.append(fila);
         }
     }
-
 
     $("#ImagenInput").change(function () {
         var fileInput = $(this)[0];
@@ -62,7 +76,7 @@ $(document).ready(function () {
                 ID: data.length + 1, // Autoincrementable
                 Categoria: categoria,
                 Nombre: nombre,
-                Precio : precio,
+                Precio: precio,
                 Imagen: imagen,
                 Descripcion: descripcion
             });
