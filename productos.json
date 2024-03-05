@@ -14,5 +14,21 @@
       "Precio": 7.99,
       "Descripcion": "Elimina gérmenes",
       "Imagen": "url_imagen_2.jpg"
-    }
+    },
+    {
+        "ID": 3,
+        "Categoria": "Limpieza",
+        "Nombre": "En Polvo",
+        "Precio": 9.99,
+        "Descripcion": "Experto en polvo",
+        "Imagen": "url_imagen_1.jpg"
+      },
+      {
+        "ID": 4,
+        "Categoria": "Limpieza",
+        "Nombre": "Para Ropa",
+        "Precio": 12.99,
+        "Descripcion": "Ideal para ropa",
+        "Imagen": "url_imagen_1.jpg"
+      }
   ]
