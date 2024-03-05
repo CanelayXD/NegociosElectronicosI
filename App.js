@@ -14,6 +14,10 @@ $(document).ready(function () {
             }
         });
     }
+    // Manejador de eventos para cargar productos al hacer clic en el botón
+    $("#cargarJSON").click(function () {
+        cargarProductos();
+    });
 
     function actualizarTabla() {
         var tabla = $("#lista tbody");
@@ -145,8 +149,4 @@ $(document).ready(function () {
         actualizarTabla();
     });
 
-    // Manejador de eventos para cargar productos al hacer clic en el botón
-    $("#cargarJSON").click(function () {
-        cargarProductos();
-    });
 });
