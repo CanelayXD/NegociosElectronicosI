@@ -1,24 +1,6 @@
 $(document).ready(function () {
     var data = [];
 
-    function cargarProductos() {
-        $.ajax({
-            url: 'productos.json',
-            dataType: 'json',
-            success: function (productos) {
-                data = productos;
-                actualizarTabla();
-            },
-            error: function () {
-                alert('Error al cargar los productos.');
-            }
-        });
-    }
-    // Manejador de eventos para cargar productos al hacer clic en el botón
-    $("#cargarJSON").click(function () {
-        cargarProductos();
-    });
-
     function actualizarTabla() {
         var tabla = $("#lista tbody");
         tabla.empty();
