@@ -21,7 +21,7 @@
         "Nombre": "En Polvo",
         "Precio": 9.99,
         "Descripcion": "Experto en polvo",
-        "Imagen": "url_imagen_1.jpg"
+        "Imagen": "url_imagen_3.jpg"
       },
       {
         "ID": 4,
@@ -29,6 +29,6 @@
         "Nombre": "Para Ropa",
         "Precio": 12.99,
         "Descripcion": "Ideal para ropa",
-        "Imagen": "url_imagen_1.jpg"
+        "Imagen": "url_imagen_4.jpg"
       }
   ]
